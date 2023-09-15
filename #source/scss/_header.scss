@@ -1,0 +1,255 @@
+.header {
+    background-color: #fff;
+    &--fixed {
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+    }
+    &__header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    &__header-bottom {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+}
+.header-top {
+    &__text {
+        font-family: "Inter";
+        font-size: 14px;
+        line-height: 18px;
+        color: #191919;
+        background-color: #fff;
+        span {
+            font-weight: 600;
+        }
+        @media (max-width: 1320px) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}
+.header-bottom {
+    &__logo {
+        font-family: "Inter";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 18px;
+        @media (max-width: 1320px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        @media (max-width: 992px) {
+            font-size: 14px;
+            line-height: 14px;
+        }
+    }
+    &__logo-link {
+        display: flex;
+        align-items: center;
+        color: #191919;
+    }
+    &__logo-svg {
+        width: 32px;
+        height: 32px;
+        margin: 0 8px 0 0;
+        fill: #ff7010;
+        @media (max-width: 1320px) {
+            width: 28px;
+            height: 28px;
+            margin: 0 5px 0 0;
+        }
+        @media (max-width: 992px) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__nav-list {
+        display: none;
+        flex-wrap: nowrap;
+        flex: 1 1 auto;
+        padding: 10px 0;
+        gap: 32px;
+        position: relative;
+        justify-content: center;
+        @media (max-width: 1320px) {
+            gap: 24px;
+        }
+        @media (max-width: 992px) {
+            gap: 9px;
+        }
+        @media (max-width: 767px) {
+            overflow: auto;
+            max-width: 440px;
+            justify-content: start;
+        }
+    }
+    &__nav-list--show {
+        display: flex;
+    }
+    &__basket {
+        display: flex;
+        background: #ff7010;
+        border: 1px solid #ff7010;
+        border-radius: 4px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background: #fff;
+        }
+    }
+    &__basket-btn {
+        background: none;
+        display: flex;
+        align-items: center;
+        flex: 1 0 auto;
+        padding: 9px 16px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #ffffff;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: #ff7010;
+            .header-bottom__basket-svg {
+                transition: all 0.2s ease-in-out;
+                fill: #ff7010;
+            }
+        }
+        @media (max-width: 1320px) {
+            padding: 8px 12px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        @media (max-width: 992px) {
+            padding: 6px 10px;
+            font-size: 12px;
+        }
+    }
+    &__basket-svg {
+        width: 24px;
+        height: 24px;
+        margin: 0 8px 0 0;
+        fill: white;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            fill: #ff7010;
+        }
+        @media (max-width: 1320px) {
+            width: 20px;
+            height: 20px;
+        }
+        @media (max-width: 992px) {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+.nav-list {
+    &__item {
+        position: relative;
+        @media (max-width: 767px) {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        font-size: 16px;
+        line-height: 22px;
+        color: #191919;
+        background: none;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: #ef2b51;
+        }
+        @media (max-width: 1320px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        @media (max-width: 992px) {
+            font-size: 13px;
+            line-height: 14px;
+        }
+    }
+    &__drop-down-svg {
+        width: 16px;
+        height: 16px;
+        margin: 0 0 0 4px;
+        position: relative;
+        top: 3px;
+        transition: all 0.2s ease-in-out;
+        @media (max-width: 1320px) {
+            width: 14px;
+            height: 14px;
+        }
+        @media (max-width: 992px) {
+            width: 12px;
+            height: 12px;
+        }
+    }
+    &__drop-down {
+        background: #ffffff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 0px 2px 8px rgba(25, 25, 25, 0.1);
+        border-radius: 12px;
+        width: 280px;
+        position: absolute;
+        z-index: 5;
+        top: 40px;
+        right: -100px;
+        display: block;
+        transform: translate(0, 20px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.2s ease-in-out;
+        @media (max-width: 1320px) {
+            width: 240px;
+            top: 30px;
+            right: -90px;
+        }
+        @media (max-width: 992px) {
+            top: 25px;
+            right: -60px;
+            max-width: 180px;
+        }
+    }
+    &__item > ._active + &__drop-down {
+        transform: translate(0, 0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+    &__item > ._active > &__drop-down-svg {
+        transform: rotate(-180deg);
+    }
+}
+.drop-down {
+    &__link {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 22px;
+        color: #191919;
+        padding: 8px 20px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: #ef2b51;
+        }
+        @media (max-width: 1320px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        @media (max-width: 992px) {
+            font-size: 13px;
+            line-height: 16px;
+        }
+    }
+}

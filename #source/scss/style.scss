@@ -1,0 +1,87 @@
+@import "./nullstyle";
+@import "./fonts";
+
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+body,
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: "SF Pro Text";
+    background: #f9f9f9;
+}
+.fixed-body {
+    overflow: hidden;
+}
+.popup-wrapper {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(25, 25, 25, 0.4);
+    backdrop-filter: blur(25px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+.popup-wrapper._active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.main {
+    flex: 1 0 auto;
+}
+.container {
+    max-width: 1320px;
+    padding: 0 15px;
+    margin: 0 auto;
+    @media (max-width: 1320px) {
+        max-width: 1120px;
+    }
+    @media (max-width: 992px) {
+        min-width: none;
+    }
+}
+.complited-popup {
+    display: none;
+    position: fixed;
+    top: 77px;
+    right: 128px;
+    font-family: "Inter";
+    font-size: 14px;
+    line-height: 18px;
+    color: #191919;
+    padding: 12px 32px;
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(25, 25, 25, 0.1);
+    border-radius: 58px;
+    @media (max-width: 992px) {
+        top: 25px;
+        right: calc(50% - 101.5px);
+        font-size: 12px;
+        line-height: 16px;
+        padding: 8px 24px;
+    }
+}
+
+@import "./header";
+@import "./nav";
+@import "./stock";
+@import "./address";
+@import "./products";
+@import "./about";
+@import "./footer";
+
+@import "./filterPopup";
+@import "./basketPopup";
+@import "./itemPopup";
+
+@import "./terms";
+@import "./about-us";
+@import "./contacts";
+@import "./support";
+@import "./oplata";
+@import "./polz-sogl";
+@import "./order-page";

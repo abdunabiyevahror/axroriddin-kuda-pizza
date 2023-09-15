@@ -1,0 +1,96 @@
+.address {
+    margin: 30px 0;
+    @media (max-width: 1320px) {
+        margin: 20px 0;
+    }
+    &__body {
+        display: flex;
+        background: #ffffff;
+        border: 1px solid #f0f0f0;
+        border-radius: 8px;
+        padding: 16px 32px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        @media (max-width: 1320px) {
+            padding: 12px 28px;
+        }
+        @media (max-width: 767px) {
+            padding: 10px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 24px;
+        color: #191919;
+        margin: 0 32px 0 0;
+        @media (max-width: 1320px) {
+            font-size: 16px;
+        }
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+    &__checker {
+        flex: 1 0 auto;
+        background: #ffffff;
+        border: 1px solid #f0f0f0;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 13px 20px 13px 40px;
+        margin: 0 20px 0 0;
+        transition: all 0.2s ease-in-out;
+        &:focus {
+            border: 1px solid #ff7010;
+        }
+        @media (max-width: 1320px) {
+            padding: 12px 18px 12px 35px;
+        }
+        @media (max-width: 767px) {
+            padding: 10px 10px 10px 30px;
+            font-size: 13px;
+        }
+    }
+    &__button {
+        background: #ff7010;
+        border: 1px solid #ff7010;
+        border-radius: 6px;
+        padding: 13px 32px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #ffffff;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background: #ffffff;
+            color: #ff7010;
+        }
+        @media (max-width: 1320px) {
+            padding: 12px 28px;
+        }
+        @media (max-width: 767px) {
+            padding: 10px 20px;
+            font-size: 13px;
+        }
+    }
+    &__location-svg {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 290px;
+        fill: #ff7010;
+        @media (max-width: 1320px) {
+            width: 18px;
+            height: 18px;
+            top: calc(50% - 9px);
+            left: 267px;
+        }
+        @media (max-width: 767px) {
+            width: 14px;
+            height: 14px;
+            top: calc(50% - 7px);
+            left: 20px;
+        }
+    }
+}

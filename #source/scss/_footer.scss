@@ -1,0 +1,129 @@
+.footer {
+    background: #fff;
+    padding: 32px 0;
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-between;
+        gap: 20px;
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, auto);
+        }
+        @media (max-width: 500px) {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+    &__logo {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 18px;
+        margin: 0 0 100px 0;
+        @media (max-width: 1320px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        @media (max-width: 992px) {
+            font-size: 14px;
+            line-height: 14px;
+            margin: 0 0 60px 0;
+        }
+        @media (max-width: 767px) {
+            margin: 0 0 15px 0;
+        }
+    }
+    &__logo-link {
+        display: flex;
+        align-items: center;
+        color: #191919;
+    }
+    &__logo-svg {
+        width: 32px;
+        height: 32px;
+        margin: 0 8px 0 0;
+        fill: #ff7010;
+        @media (max-width: 1320px) {
+            width: 28px;
+            height: 28px;
+        }
+        @media (max-width: 992px) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+        color: #191919;
+        @media (max-width: 992px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    &__title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        color: #191919;
+        margin: 0 0 22px 0;
+        @media (max-width: 992px) {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0 0 16px 0;
+        }
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    &__link {
+        font-size: 16px;
+        line-height: 22px;
+        color: #191919;
+        margin: 0 0 20px 0;
+        i {
+            font-size: 20px;
+            color: #ff7010;
+            margin: 0 8px 0 0;
+            position: relative;
+            top: 2px;
+        }
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: #ef2b51;
+        }
+        @media (max-width: 992px) {
+            font-size: 14px;
+            line-height: 18px;
+            margin: 0 0 16px 0;
+        }
+        @media (max-width: 767px) {
+            margin: 0 0 8px 0;
+        }
+    }
+    &__svg {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 2px;
+        fill: #ff7010;
+        @media (max-width: 1320px) {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    &__list {
+        display: flex;
+        gap: 24px;
+        @media (max-width: 1320px) {
+            gap: 20px;
+        }
+    }
+}
